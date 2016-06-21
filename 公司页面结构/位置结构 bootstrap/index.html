@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/indexStyle.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular-1.3.0.js"></script>
+</head>
+<body>
+<!--头部导航-->
+<section class="content-header">
+    <div id="breadcrumb">
+        <a href="#" class="tip-bottom" data-original-title="Go to Home"><i class="fa fa-home fa-fw"></i>主页</a>
+        <a href="#" class="tip-bottom">校园网络</a>
+        <a href="#" class="tip-bottom">校园用户消费</a>
+    </div>
+</section>
+<!--中间内容-->
+    <div class="container-fluid" ng-controller="myCtrl">
+        <div class="row">
+            <div class="col-md-2 left"  ng-class="{'tabanimate': pcleftstatue}"></div>
+            <div class="col-md-{{text2}} center">
+                <div class="btn btn-left" ng-click="hidecallbackleft()"></div>
+                <div class="btn btn-right" ng-click="openLefts()"> </div>
+            </div>
+            <div class="col-md-3 right"  ng-class="{'tabanimate': pcrightstatue}"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script type="text/javascript">
+    var myApp = angular.module("myApp",[]);
+    myApp.controller('myCtrl',["$scope",function($scope){
+        var winH=$(window).height()-35;
+        $(".left,.center,.right").css("height",winH)
+// 页面大小发生变化时候触发
+        window.onresize = function (){
+            var winH=$(window).height()-35;
+            $(".left,.center,.right").css("height",winH)
+        }
+//左按钮切换
+        $scope.text2 = 7;
+        $scope.pcleftstatue =false;
+        $scope.hidecallbackleft= function(){
+            $scope.pcleftstatue =  !$scope.pcleftstatue;
+            if( $scope.pcleftstatue){
+                if($scope.pcrightstatue){
+                    $scope.text2 = 12;
+                }else{
+                    $scope.text2 = 9;
+                }
+            }else{
+                if(!$scope.pcrightstatue){
+                    $scope.text2 = 7;
+                }else{
+                    $scope.text2 = 10;
+                }
+            }
+        };
+//右侧按钮
+        $scope.pcrightstatue =false;
+        $scope.openLefts= function(){
+            $scope.pcrightstatue=!$scope.pcrightstatue;
+            if( $scope.pcrightstatue){
+                if($scope.pcleftstatue){
+                    $scope.text2 =12;
+                }else{
+                    $scope.text2 =10;
+                }
+            }else{
+                if(!$scope.pcleftstatue){
+                    $scope.text2 = 7;
+                }else{
+                    $scope.text2 = 9;
+                }
+            }
+        }
+    }]);
+
+</script>

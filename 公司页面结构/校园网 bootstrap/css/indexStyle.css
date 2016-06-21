@@ -1,0 +1,91 @@
+body, html {
+    font-family: 'Microsoft YaHei';
+}
+
+#breadcrumb {
+    background-color: #fff;
+    border-bottom: 1px solid #e3ebed;
+    text-align: left;
+}
+
+#breadcrumb a {
+    padding: 8px 20px 8px 10px;
+    display: inline-block;
+    background-image: url('../images/breadcrumb.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    color: #333;
+}
+
+#containerHeight {
+    width: 100%;
+    border: 1px solid #ccc
+}
+
+.tabLeft {
+    width: 40px;
+    background: #d7d7d7;
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.tab-p{     position: relative;
+    width: 100%;
+    min-height: 520px !important;
+    z-index: 0;
+    zoom: 1;
+    background: #fff0f4;
+}
+.tabbable{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    z-index: 9;
+    width: 58px;
+    background: #fbfbfb;
+    border-right: 1px solid #ddd;}
+.tab-but{
+    position: absolute;
+    z-index: 9;
+    top: 40%;
+
+    width: 15px;
+    height: 60px;
+    background: #fafcff;
+    cursor: pointer;
+
+
+}
+.tabmap{    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 300px;
+    right: 0;
+    overflow: auto; background: blue;
+    color: #fff;
+    font-size: 120px;
+    font-weight: bold;
+    text-align: center;
+}
+.tab-content{  /*上下左右都写*/
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    border: 0;
+    background: red;
+    text-align: center;
+    line-height: 80px;
+    font-size: 80px;
+    color: #fff;
+}
+.tab-content-left{  left: 58px;  }
+.tab-content-right{  right: 58px;  }
+.tabs-right{ right: 0;}  /*左侧定位*/
+.tabs-left{ left: 0;}  /*右侧定位*/
+.tab-but-right{ right: 57px; border: 1px solid #a0a1a3; border-right: none;} /*按钮定位*/
+.tab-but-left{ left: 57px;  border: 1px solid #a0a1a3; border-left: none;}
