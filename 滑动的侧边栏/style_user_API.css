@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+img {
+	border: none; 
+}
+ul, ul li {
+	list-style: outside none none;
+}
+html, body, div, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, li, p, form, table, th, td {
+	margin: 0;
+	padding: 0;
+}
+.sidenav { background-color:#fff; float:left;width: 400px}
+.sidenav ul:before {content: " ";display: table;}
+.sidenav ul li { line-height:48px; text-align:center; border-bottom:1px dashed #999; width:100%;}
+.sidenav ul li a { font-size:18px; color:#666; display:block; background-color:#fff;}
+.side_now {background-color:#3973f0 !important; color:#fff !important;}
+.sidenav ul li a:hover { background-color:#3973f0; font-size:18px; color:#fff;}
+.sidenav ul li ul li { float:left; background-color:#fff;}
+

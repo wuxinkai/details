@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        .RadioBox{width:420px; background: seagreen; position: absolute;left: 50%;margin-left: -210px}
+        .ulRadio,.RidioTitle{list-style: none; padding: 0;padding: 0}
+        .ulRadio{margin-left: 15px}
+        .ulRadio li,.RidioTitle li{float: left;}
+        .ulRadio li:nth-child(even){background: red;width: 45px; height: 3px; margin-top: 8px}
+        .ulRadio li:nth-child(odd){width: 15px;height: 15px;border: 1px solid red;border-radius: 50%}
+        .ulRadio li input{list-style: none; margin: 1px; padding: 0;opacity: 0}
+        .radio{width: 15px; height: 15px;background: red}
+        .RidioTitle { margin-top: 3px;}
+        .RidioTitle li:first-child{margin-left: 0px}
+        .RidioTitle li{margin-left: 14px}
+    </style>
+</head>
+<body>
+<div class="RadioBox">
+    <ul class="clearfix ulRadio">
+        <li class="radio"> <input type="radio" checked="checked"  name="sport" ></li>
+        <li></li>
+        <li> <input type="radio"  name="sport" ></li>
+        <li></li>
+        <li> <input type="radio"   name="sport" ></li>
+        <li></li>
+        <li> <input type="radio"  name="sport" ></li>
+        <li></li>
+        <li> <input type="radio"   name="sport" ></li>
+        <li></li>
+        <li> <input type="radio"  name="sport" ></li>
+        <li></li>
+        <li> <input type="radio"  name="sport" ></li>
+    </ul>
+    <ul class="clearfix RidioTitle">
+        <li>[23,1)</li>
+        <li>[23,1)</li>
+        <li>[23,1)</li>
+        <li>[23,1)</li>
+        <li>[23,1)</li>
+        <li>[23,1)</li>
+        <li>[23,1)</li>
+    </ul>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+<script type="text/javascript">
+    $(".ulRadio li:even").click(function(){
+        $(this).addClass("radio").siblings().removeClass("radio")
+    })
+</script>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style_user_API.css"/>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"> </script>
+</head>
+<body>
+<script type="text/javascript">
+    function hideThis(ulTarget) {
+        debugger;
+        if ($(ulTarget).is(":hidden")) {
+            //所有的指标信息隐藏
+            $(".hideClass").hide("normal");
+            $(ulTarget).show("normal");
+        }
+        else {
+            $(ulTarget).hide("normal");
+        }
+    }
+</script>
+<div class="sidenav">
+    <ul>
+        <li style="border-bottom: 1px dashed white;">
+            <a onclick="hideThis(r1)" style="border:none;" href="javascript:void(0)" class="side_now">旅游指数</a>
+            <ul id="r1" class="hideClass">
+                <li>
+                    <a id="10007" style="cursor:pointer;" onclick="submitTarget(&#39;10007&#39;)">游客迁徙图</a>
+                </li>
+                <li>
+                    <a id="10008" style="cursor:pointer;" onclick="submitTarget(&#39;10008&#39;)">今日客流统计</a>
+                </li>
+                <li>
+                    <a id="10009" style="cursor:pointer;" onclick="submitTarget(&#39;10009&#39;)">近两周客流走势</a>
+                </li>
+                <li>
+                    <a id="10010" style="cursor:pointer;" onclick="submitTarget(&#39;10010&#39;)">省内游指数</a>
+                </li>
+                <li>
+                    <a id="10012" style="cursor:pointer;" onclick="submitTarget(&#39;10012&#39;)">出省游指数</a>
+                </li>
+                <li>
+                    <a id="10013" style="cursor:pointer;" onclick="submitTarget(&#39;10013&#39;)">出境游指数</a>
+                </li>
+                <li>
+                    <a id="10014" style="cursor:pointer;" onclick="submitTarget(&#39;10014&#39;)">旅行时间和时长</a>
+                </li>
+                <li>
+                    <a id="10015" style="cursor:pointer;" onclick="submitTarget(&#39;10015&#39;)">驴友画像</a>
+                </li>
+                <li>
+                    <a id="10016" style="cursor:pointer;" onclick="submitTarget(&#39;10016&#39;)">旅行app使用排行</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li style="border-bottom: 1px dashed white;">
+            <a onclick="hideThis(r2)" style="border:none;" href="javascript:void(0)" class="side_now">智慧出行</a>
+            <ul id="r2" style="display:none;" class="hideClass">
+                <li>
+                    <a id="10001" style="cursor:pointer;" onclick="submitTarget(&#39;10001&#39;)">阅读指数</a>
+                </li>
+                <li>
+                    <a id="10002" style="cursor:pointer;" onclick="submitTarget(&#39;10002&#39;)">旅游热度指数</a>
+                </li>
+                <li>
+                    <a id="10003" style="cursor:pointer;" onclick="submitTarget(&#39;10003&#39;)">线上社交指数</a>
+                </li>
+                <li>
+                    <a id="10004" style="cursor:pointer;" onclick="submitTarget(&#39;10004&#39;)">音乐爱好者指数</a>
+                </li>
+                <li>
+                    <a id="10005" style="cursor:pointer;" onclick="submitTarget(&#39;10005&#39;)">视频爱好者指数</a>
+                </li>
+                <li>
+                    <a id="10006" style="cursor:pointer;" onclick="submitTarget(&#39;10006&#39;)">证券热度指数</a>
+                </li>
+                <li>
+                    <a id="10011" style="cursor:pointer;" onclick="submitTarget(&#39;10011&#39;)">终端销售排行</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li style="border-bottom: 1px dashed white;">
+            <a onclick="hideThis(r3)" style="border:none;" href="javascript:void(0)" class="side_now">零售指数</a>
+            <ul id="r3" style="display:none;" class="hideClass">
+                <li>
+                    <a id="10017" style="cursor:pointer;" onclick="submitTarget(&#39;10017&#39;)">商圈质量评估指数</a>
+                </li>
+                <li>
+                    <a id="10018" style="cursor:pointer;" onclick="submitTarget(&#39;10018&#39;)">用户商场偏好指数</a>
+                </li>
+                <li>
+                    <a id="10019" style="cursor:pointer;" onclick="submitTarget(&#39;10019&#39;)">商场刷卡消费指数</a>
+                </li>
+                <li>
+                    <a id="10020" style="cursor:pointer;" onclick="submitTarget(&#39;10020&#39;)">电商热度指数</a>
+                </li>
+
+            </ul>
+        </li>
+
+    </ul>
+    <ul>
+        <li style="border-bottom: 1px dashed white;">
+            <a onclick="hideThis(r5)" style="border:none;" href="javascript:void(0)" class="side_now">医疗指数</a>
+            <ul id="r5" style="display:none;" class="hideClass">
+                <li>
+                    <a id="10025" style="cursor:pointer;" onclick="submitTarget(&#39;10025&#39;)">医院就诊饱和指数</a>
+                </li>
+                <li>
+                    <a id="10026" style="cursor:pointer;" onclick="submitTarget(&#39;10026&#39;)">居民健康指数</a>
+                </li>
+                <li>
+                    <a id="10027" style="cursor:pointer;" onclick="submitTarget(&#39;10027&#39;)">流行病关注指数</a>
+                </li>
+                <li>
+                    <a id="10028" style="cursor:pointer;" onclick="submitTarget(&#39;10028&#39;)">药品关注度指数</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
