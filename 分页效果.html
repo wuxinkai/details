@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style=" text-align: right; margin: 0 auto;" class="search-center">
+    <uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="perItems" max-size="maxSize" ng-change="pageChanged(currentPage, maxSize)"
+                    previous-text="上一页" next-text="下一页" class="pagination-sm" boundary-link-numbers="true" rotate="false" num-pages="numPages"></uib-pagination>
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    $scope.perItems = 19;    //页码显示的数量
+    $scope.totalItems = 0//总数据量
+    $scope.currentPage = 1;//当前页面
+    $scope.numPages = 0;//页码
+    $scope.maxSize = 5;//页码最多显示个数
+//向后台发起请求
+    function GetData() {
+        httpService.post("DAAS", "UserAccountService", "GetUsrBlackList", {
+            page: $scope.currentPage, pagesize: $scope.perItems
+        }).then(function (data) {
+
+            $scope.blackListData = data.Items;  //Item是后台条件
+
+            $scope.totalItems = data.TotalCount;//TotalCount是后台条件总数据量
+        }, function (e) {
+            console.log("error:" + e)
+        });
+    }
+    //实现分页
+    $scope.pageChanged = function (page, pageCount) {
+        $scope.currentPage = page;//当前显示的是第几页  ，点击后执行的方法
+        GetData();
+
+    };
+</script>

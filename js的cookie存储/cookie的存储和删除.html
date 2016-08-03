@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;list-style: none;}
+        .wary{ height: 80px;background: rgba(199, 202, 196, 0.49);}
+        #box{width: 1200px; margin: 0 auto; background: palegoldenrod;height: 100%;overflow: hidden}
+        #box li{ float: left;line-height: 80px; padding: 0 25px;}
+        #box li a{ text-decoration: none;color: black;font-size: 18px;font-weight: bold}
+        #box li a:hover{color: red}
+    </style>
+</head>
+<body>
+   <div class="wary">
+       <ul id="box">
+           <li><a class="index" href="jacascript:;">首页</a></li>
+           <li><a class="product" href="jacascript:;">产品</a></li>
+           <li><a class="programme" href="jacascript:;">解决方案</a></li>
+           <li><a class="case" href="jacascript:;">案例</a></li>
+           <li><a class="Presentation" href="jacascript:;">数据报告</a></li>
+           <li><a class="college" href="jacascript:;">大数据学院</a></li>
+           <li><a class="about" href="jacascript:;">关于我们</a></li>
+       </ul>
+   </div>
+    <div id="box2" style="font-size: 40px;color: red;font-weight: bold;text-align: center"></div>
+</body>
+</html>
+<script type="text/javascript">
+//存Cookie
+    function setCookie(name, value) {
+        var Days = 30;
+        var exp = new Date();
+        exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+    }
+
+//存储过程
+    document.getElementById("box").onclick = function (e) {
+        e = e || window.event;
+        var tar = e.target || e.srcElement;
+        if(tar.tagName.toLowerCase()=="a"){
+            setCookie("cunchu", tar.innerHTML); //存储的是点击的文字
+            setCookie("cunchu", tar.innerHTML);
+        }
+    }
+
+
+
+//读取cookies
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+        if (arr = document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+//如果coole
+    if (document.cookie != "") {
+        var xxx=getCookie("cunchu");  //读取
+        document.getElementById("box2").innerHTML=xxx ; //显示在html页面中
+    }
+</script>
