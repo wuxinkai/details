@@ -1,0 +1,64 @@
+﻿<div class="container-fluid reset-magin">
+    <div class="row">
+        <div class="reset-logo"></div>
+    </div>
+    <div class="row">
+        <div class="reset-container">
+            <form name="resetForm">
+                <div class="clearfix reset-content">
+                    <p class="reset-header">修改密码</p>
+                    <div class="reset-input">
+                        <div class="form-group has-feedback" ng-class="{'has-error' : password_error}">
+                            <input type="password" ng-model="password" class="form-control" placeholder="密码"
+                            ng-change="validForm()"
+                                tooltip="{{password_t_text}}"
+                                tooltip-placement="top"
+                                tooltip-trigger="mouseenter"
+                                tooltip-enable="password_error" />
+                            <span class="glyphicon glyphicon-lock form-control-feedback reset-icon"></span>
+                        </div>
+                        <div class="form-group has-feedback" ng-class="{'has-error' : newpassword_error}">
+                            <input type="password" ng-model="newpassword" class="form-control" placeholder="新密码"
+                            ng-change="validForm()"
+                                tooltip="{{newpassword_t_text}}"
+                                tooltip-placement="top"
+                                tooltip-trigger="mouseenter"
+                                tooltip-enable="newpassword_error" />
+                            <span class="glyphicon glyphicon-lock form-control-feedback reset-icon"></span>
+                        </div>
+
+                        <div class="form-group has-feedback" ng-class="{'has-error' : cfmPassword_error}">
+                            <input type="password" ng-model="cfmPassword" class="form-control" placeholder="确认新密码"
+                            ng-change="validForm()"
+                                tooltip="{{cfmPassword_t_text}}"
+                                tooltip-placement="top"
+                                tooltip-trigger="mouseenter"
+                                tooltip-enable="cfmPassword_error" />
+                            <span class="glyphicon glyphicon-check form-control-feedback reset-icon"></span>
+                        </div>
+                        <div class="form-group " ng-class="{'has-error' : verificationCode_error}">
+                            <input type="text" ng-model="verificationCode" class="form-control" placeholder="验证码"
+                            ng-change="validForm()"
+                                tooltip="{{verificationCode_t_text}}"
+                                tooltip-placement="top"
+                                tooltip-trigger="mouseenter"
+                                tooltip-enable="verificationCode_error" />
+                            <a href="javascript:;" ng-click="changeImg()">
+                                <img id="valiImg" width="80" height="28" title="点击刷新" ng-src='{{valiImg}}' />
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn" ng-click="changePwd()">修改</button>
+                        <button class="btn" ng-click="goHomePage()">返回</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="reset-foot">
+            <label>COPYRIGHT © 2015 北京泰合佳通信息技术有限公司广东分公司</label>
+        </div>
+    </div>
+</div>

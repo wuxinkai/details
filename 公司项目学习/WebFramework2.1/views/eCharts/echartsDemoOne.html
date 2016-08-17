@@ -1,0 +1,23 @@
+﻿<button type="button" class="btn btn-primary" ng-click="changeTheme()">切换样式</button>
+<button type="button" class="btn btn-primary" ng-click="changeData()">切换数据</button>
+<div ct-echarts style="height:400px" id="radarChart" ec-config="demoConfig" ec-option="demoOption"></div>
+<div class="panel panel-info" style="margin-bottom: 0px;">
+    <div class="panel-body">
+        说明
+    </div>
+    <div class="panel-footer">
+        <p>使用ct-echarts指令, 主要配置如下两个变量：</p>
+        <p>1.ecOption：和echarts中的option一样，因此你直接可以把官网的例子拷进来用;</p>
+        <p>2.ecConfig：echarts相关的参数的配置项, 具体如下:</p>
+        <p>2.1 chartList：指定按需加载图形类型, 共有17种类型图表, 要确保图表正确显示必须正确加载图形组件, 注意要确保正确性;</p>
+        <p>    ['bar','line','scatter','pie','radar','venn','treemap','tree','map','k','force','chord','gauge','funnel','eventriver','wordcloud','heatmap']</p>
+        <p>2.2 theme：图表样式主题,用于控制显示风格,提供了14种风格,根据需要指定一种;</p>
+        <p>    macarons, infographic, shine, dark, blue, green, red, gray, helianthus, roma, mint, macarons2, sakura, default</p>
+        <p>2.3 event：绑定事件, 用于关联事件进行一些特殊的处理,根据需要指定一个或者多个;</p>
+        <p>    refresh,restore,resize,click,dblclick,hover,mouseout,dataChanged,dataZoom,dataRange,dataRangeHoverLink,legendSelected,legendHoverLink</p>
+        <p>    mapSelected,pieSelected,magicTypeChanged,dataViewChanged,timelineChanged,mapRoam</p>
+        <p>2.4 dataLoaded：数据是否加载（用于Loading）用于控制是否显示加载提示;</p>
+        <p>2.5 loadingOption：加载效果配置项同Echarts官网;</p>
+        <p>2.6 connect:添加联动图表, 如果需要联动,需要给统计图对象指定ID,并且确保设置正确的联动对象ID.</p>
+    </div>
+</div>

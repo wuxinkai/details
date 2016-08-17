@@ -1,0 +1,96 @@
+[
+    {
+        "FontAwesomeClass": "fa fa-users",
+        "FontAwesomeName": "fa fa-users"
+    },
+    {
+        "FontAwesomeClass": "fa fa-user",
+        "FontAwesomeName": "fa fa-user"
+    },
+    {
+        "FontAwesomeClass": "fa fa-sitemap",
+        "FontAwesomeName": "fa fa-sitemap"
+    },
+    {
+        "FontAwesomeClass": "fa fa-user-secret",
+        "FontAwesomeName": "fa fa-user-secret"
+    },
+    {
+        "FontAwesomeClass": "fa fa-cogs",
+        "FontAwesomeName": "fa fa-cogs"
+    },
+    {
+        "FontAwesomeClass": "fa fa-book",
+        "FontAwesomeName": "fa fa-book"
+    },
+    {
+        "FontAwesomeClass": "fa fa-file-text-o",
+        "FontAwesomeName": "fa fa-file-text-o"
+    },
+    {
+        "FontAwesomeClass": "fa fa-desktop",
+        "FontAwesomeName": "fa fa-desktop"
+    },
+    {
+        "FontAwesomeClass": "fa fa-globe",
+        "FontAwesomeName": "fa fa-globe"
+    },
+    {
+        "FontAwesomeClass": "fa fa-refresh",
+        "FontAwesomeName": "fa fa-refresh"
+    },
+    {
+        "FontAwesomeClass": "fa fa-trash-o",
+        "FontAwesomeName": "fa fa-trash-o"
+    },
+    {
+        "FontAwesomeClass": "fa fa-plus",
+        "FontAwesomeName": "fa fa-plus"
+    },
+    {
+        "FontAwesomeClass": "fa fa-share-square-o",
+        "FontAwesomeName": "fa fa-share-square-o"
+    },
+    {
+        "FontAwesomeClass": "fa fa-print",
+        "FontAwesomeName": "fa fa-print"
+    },
+    {
+        "FontAwesomeClass": "fa fa-download",
+        "FontAwesomeName": "fa fa-download"
+    },
+    {
+        "FontAwesomeClass": "fa fa-save",
+        "FontAwesomeName": "fa fa-save"
+    },
+    {
+        "FontAwesomeClass": "fa fa-search",
+        "FontAwesomeName": "fa fa-search"
+    }
+	,
+    {
+        "FontAwesomeClass": "fa fa-object-group",
+        "FontAwesomeName": "fa fa-object-group"
+    }
+	,
+    {
+        "FontAwesomeClass": "fa fa-cog",
+        "FontAwesomeName": "fa fa-cog"
+    },
+    {
+        "FontAwesomeClass": "glyphicon glyphicon-edit",
+        "FontAwesomeName": "glyphicon glyphicon-edit"
+    },
+    {
+        "FontAwesomeClass": "glyphicon glyphicon-list-alt",
+        "FontAwesomeName": "glyphicon glyphicon-list-alt"
+    },
+    {
+        "FontAwesomeClass": "glyphicon glyphicon-book",
+        "FontAwesomeName": "glyphicon glyphicon-book"
+    },
+    {
+        "FontAwesomeClass": "glyphicon glyphicon-retweet",
+        "FontAwesomeName": "glyphicon glyphicon-retweet"
+    }
+]
