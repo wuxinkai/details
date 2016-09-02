@@ -32,7 +32,13 @@
               url: '/state',
               templateUrl: 'views/state.html',
               controllerUrl: 'scripts/controllers/stateCtrl'
-          })).state('main.echartsDemoOne', angularAMD.route({
+          })).state('main.kendoGrid', angularAMD.route({    //树形图表
+                url: '/kendoGrid',
+                templateUrl: 'views/kendoGrid.html',
+                controllerUrl: 'scripts/controllers/kendoGridCtrl'
+
+            }))
+            .state('main.echartsDemoOne', angularAMD.route({
               url: '/echartsDemoOne',
               templateUrl: 'views/eCharts/echartsDemoOne.html',
               controllerUrl: 'scripts/controllers/eCharts/echartsDemoOneCtrl'
