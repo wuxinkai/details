@@ -32,10 +32,13 @@ require.config({
         'angular-route': 'bower_components/angular-route/angular-route.min',
         'angular-ui-router': 'bower_components/angular-ui-router/angular-ui-router.min',
         'angularAMD': 'bower_components/angularAMD/angularAMD.min',
+
         'ngload': 'bower_components/angularAMD/ngload.min',
         'jQuery': 'bower_components/jQuery/jQuery-2.1.3.min',
         'bootstrap': 'bower_components/bootstrap/js/bootstrap.min',
         'ui.bootstrap': 'bower_components/ui-bootstrap-tpls/ui-bootstrap-tpls-0.13.2.min',
+        //kendoºº»¯
+      //  'kendo-angularAll': 'bower_components/kendo/kendo.all.min',
         'kendo-angular': 'bower_components/kendo/kendo.custom.min',
         'kendo-czh': "bower_components/kendo/cultures/kendo.culture.zh-CN.min",
         'kendo-mzh': "bower_components/kendo/messages/kendo.messages.zh-CN.min",
@@ -72,6 +75,9 @@ require.config({
         'angular': {
             deps: ['jQuery']
         },
+        //'kendo-angularAll': {
+        //    deps: ['jQuery', 'angular']
+        //},
         'kendo-angular': {
             deps: ['jQuery', 'angular']
         },
