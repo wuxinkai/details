@@ -65,7 +65,6 @@
 //天
         var ds = new Date();   //本地日期的  开始时间
         ds.setDate(ds.getDate() + 1); //设置日期
-
         var de = new Date();
         de.setDate(de.getDate() - 3);
 //小时
@@ -106,5 +105,22 @@
                 alert(view)
             }
         }).data("kendoDatePicker");
+
+//通过ng-options控制显示样式
+        $scope.names = [{ Name: "年", ID: 3 }, { Name: "月", ID: 2 }, { Name: "日", ID: 1 }, { Name: "时", ID: 0 }];
+//默认显示哪一项
+        $scope.datetype = 1;
+//设置显示的是哪一个
+        $scope.timeChanges = function () {
+            if ($scope.datetype == 3) {
+
+            }else if($scope.datetype == 2){
+
+            }else if($scope.datetype == 1){
+
+            }else if($scope.datetype == 0){
+
+            }
+        }
     }]
 });

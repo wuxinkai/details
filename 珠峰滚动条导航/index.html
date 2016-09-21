@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="css/style.css"/>
-
     <script type="text/javascript" src="js/event.js"></script>
     <script type="text/javascript" src="js/tween.js"></script>
 </head>
@@ -16,9 +15,10 @@
             <div id="outerWrap">
                 <!-- 滚动条-->
                 <div id="sliderParent"><span id="slider" ></span></div>
-                <div id="container">
-                    <div id="content" >
+                <div id="receptacle">
+                    <div id="mid" >
                        <div style="height:2000px; background-color: #1d9fd3"></div>
+                       <div style="height:2000px; background-color: red"></div>
 
                     </div>
                 </div>
@@ -28,42 +28,4 @@
 </div>
 </body>
 </html>
-<script>
-    var container = document.getElementById('container');  //最外层的div
-    var content = document.getElementById('content');  //第二层的div
-    var oDivs = DOM.children(content, "div");  //获取content底下的儿子叫div的 利用的是tween里的内容
-
-
-    (function () {
-        function fn(e) {
-            e = e || window.event;  //利用事件绑定
-//鼠标滚轮事件
-            if (e.wheelDelta) {
-                var n = e.wheelDelta;
-
-            } else if (e.detail) {
-                var n = e.detail * -1;
-                console.log(e.wheelDelta);
-            }
-            if (n > 0) {
-                container.scrollTop -= 12;
-            } else if (n < 0) {
-                container.scrollTop += 12;
-            }
-     //     滚动条距离顶部的位置      滚动条滚动距离          外层盒子高                除以  里面盒子的高度
-            slider.style.top = container.scrollTop * container.offsetHeight / content.offsetHeight + "px";
-//            滚动条的位置  *  里面盒子高度 除以   外层盒子高度
-            slider.offsetTop * (content.offsetHeight / container.offsetHeight);
-            var st = container.scrollTop; //滚动的距离
-
-        }
-        container.onmousewheel = fn;
-
-        slider = document.createElement('span');
-        slider.id = "slider";
-        slider.style.height = container.offsetHeight * (container.offsetHeight / content.offsetHeight) + "px";
-        sliderParent.appendChild(slider);
-        on(slider, "mousedown", down);
-    })();
-
-</script>>
+<script type="text/javascript" src="js/slider.js"></script>

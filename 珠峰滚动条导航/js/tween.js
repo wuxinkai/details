@@ -302,27 +302,6 @@ function animate(ele, obj, duration, type, fnCallback) {
             ele.timer = window.setTimeout(_move, interval)
         }
     }
-};; (function() {
+};
 
 
-	
-    oNav = document.getElementById('ulNav');
-    var b = document.createElement('div');
-    var c = oNav.getElementsByTagName('li');
-    b.id = "navSlider";
-    oNav.appendChild(b);
-    b.style.width = DOM.children(c.item(0), "a")[0].offsetWidth + "px";
-    for (var i = 0; i < c.length; i++) {
-        c.item(i).i = i;
-        c.item(i).onmouseover = function() {
-            var a = DOM.children(this, "a")[0];
-            var w = a.offsetWidth;
-            var l = a.offsetLeft;
-            animate(b, {
-                left: l,
-                width: w
-            },
-            500, 4)
-        }
-    }
-})();

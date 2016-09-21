@@ -28,6 +28,8 @@
 <!--kendo ui-->
 <div style="font-size: 20px">日历</div>
 <div>
+    <select class="form-control" style="width: 100px;float: left" ng-model="datetype"  ng-change="timeChanges()"   ng-options="obj.ID as obj.Name for obj in names" > </select>
+
     <input id="TimeDay" style="width: 250px;float: left" />
 
     <!--<input id="TimeHour" style="width: 250px;float: left" />-->

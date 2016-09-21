@@ -24,10 +24,20 @@
               templateUrl: 'views/notification.html',
               controllerUrl: 'scripts/controllers/notificationCtrl'
           }))
+          .state('main.less', angularAMD.route({
+              url: '/less',
+              templateUrl: 'views/less.html',
+              controllerUrl: 'scripts/controllers/lessCtrl'
+          }))
           .state('main.uibootstrap', angularAMD.route({
               url: '/uibootstrap',
               templateUrl: 'views/uibootstrap.html',
               controllerUrl: 'scripts/controllers/uibootstrapCtrl'
+          }))
+          .state('main.echartsMap', angularAMD.route({
+               url: '/echartsMap',
+               templateUrl: 'views/echartsMap.html',
+               controllerUrl: 'scripts/controllers/echartsMapCtrl'
           }))
           .state('main.confirm', angularAMD.route({
               url: '/confirm',

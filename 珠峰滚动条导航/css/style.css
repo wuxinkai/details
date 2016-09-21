@@ -24,7 +24,7 @@ a:hover{text-decoration:underline;}
 
 
 /*20141127*/
-#container{float:left;width:100%;height:384px;background:#fff;overflow:hidden;}
+#receptacle{float:left;width:100%;height:384px;background:#fff;overflow:hidden;}
 #slider{position:absolute;top:0px;right:0;width:6px;border-radius:6px;background:#ccc;cursor:pointer;}
 #sliderParent{position:absolute;left:0;height:0;width:99%;z-index:999;}
 #outerWrap{position:relative;z-index:999}

@@ -1,1 +1,79 @@
-111111
+﻿<div class="">
+    
+    <div class="searchLeftId">
+        <select class="form-control" ng-model="datetype"  ng-change="timeChanges()" style="display: inline-block;width: 100px;"  ng-options="obj.ID as obj.Name for obj in names" ></select>
+        <!--<select class="form-control" ng-options="x in names" ng-change="timeChanges()" style="display: inline-block;" ng-model="selectedName"></select>-->
+        <!-- 年-->
+        <div class="" ng-show="isTimeType0">
+            <input id="startTimeYear" style="width: 250px;float: left" />
+            <span class="zhi">至</span>
+            <input id="endTimeYear" style="width: 250px;float: left" />
+        </div>
+        <!-- 月-->
+        <div class="" ng-show="isTimeType3">
+            <input id="startTimeMonth" style="width: 250px;float: left" />
+            <span class="zhi">至</span>
+            <input id="endTimeMonth" style="width: 250px;float: left" />
+        </div>
+        <!-- 日-->
+        <div class="" ng-show="isTimeType2">
+            <input id="startTimeDay" style="width: 250px;float: left" />
+            <span class="zhi">至</span>
+            <input id="endTimeDay" style="width: 250px;float: left" />
+        </div>
+        <!-- 时-->
+        <div class="" ng-show="isTimeType1">
+            <input id="startTimeHour" style="width: 250px;float: left" />
+            <span class="zhi">至</span>
+            <input id="endTimeHour" style="width: 250px;float: left" />
+        </div>
+        <button style="float: left;z-index:1000;" ng-click="timeSearch()">确定</button>
+    </div>
+</div>
+<style type="text/css">
+    .centimer {
+        position: absolute;
+        left: 50%;
+        margin-left: -350px;
+        bottom: 5%;
+        height: 100px;
+        z-index: 9000;
+    }
+
+    .timerHeader h5 {
+        float: left;
+        line-height: 30px;
+        text-indent: 5px;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 18px;
+    }
+
+
+    .fislBox {
+        width: 100%;
+        height: 40%;
+        overflow: hidden;
+    }
+
+    .fislHeader {
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+    }
+
+    .fislHeader i {
+        margin-top: 7px;
+        float: left;
+        width: 30px;
+        height: 30px;
+    }
+
+    .fislHeader span {
+        float: left;
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    .zhi{float: left;width: 30px; height: 30px;text-align: center; line-height: 30px;}
+</style>
