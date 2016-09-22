@@ -1,0 +1,130 @@
+
+//声明变量
+@test-width:100px;
+@bg-color:pink;
+
+.box{width:@test-width;height: @test-width;background: @bg-color }
+
+// 混合
+.box-3{ border: 1px solid red}
+.box2{
+  .box;
+  .box-3
+}
+
+// 混合 带参数
+.box-4(@border-width){
+  border: solid yellow @border-width ;
+}
+.box1{
+  .box;
+  .box-4(10px)
+}
+
+//三角
+.sanjiao{
+  width: 0; height: 0;
+  overflow: hidden;
+  border: 20px;
+  border-color: transparent transparent red transparent;
+  border-style:  dashed dashed solid dashed;
+}
+//匹配模式
+.triangle(bottom, @w:15px, @c:#ccc){
+  border-width: @w;
+  border-color:@c transparent  transparent  transparent;
+  border-style:solid  dashed  dashed dashed;
+}
+.triangle(right, @w:15px, @c:#ccc){
+  border-width: @w;
+  border-color: transparent @c transparent  transparent;
+  border-style: dashed solid  dashed dashed;
+}
+.triangle(left, @w:15px, @c:#ccc){
+  border-width: @w;
+  border-color: transparent  transparent  transparent @c  ;
+  border-style:dashed  dashed dashed solid;
+}
+.triangle(top, @w:15px, @c:#ccc){
+  border-width: @w;
+  border-color: transparent  transparent @c transparent   ;
+  border-style:dashed  dashed  solid dashed ;
+}
+//@_  是给每个都添加
+.triangle(@_,@w:15px, @c:#ccc){
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.sanjiao1{
+  //.triangle(left,100px,red);
+  .triangle(left)
+}
+
+//匹配定位
+.pos(r){
+  position: relative;
+}
+.pos(a){
+  left: @test-width;
+  position: absolute;
+}
+.pipei{
+  width: 100px;
+  height: 100px;
+  background: gainsboro;
+  .pos(a)!important;  //变量后面加！important 索引的都会有
+}
+
+//嵌套
+
+.list{
+  width: 600px;
+  margin: 30px auto;
+  padding: 0;
+  list-style: none;
+
+  li{
+    height: 30px;
+   line-height: 30px;
+    border-bottom: 1px solid #ccc;
+    background: pink;
+    padding: 0 10px;
+  }
+  //&代表上一层选择器
+  &:hover{
+    color: red;
+  }
+  a{
+    float: left;
+  }
+  span{
+    float: right;
+  }
+}
+//@arguments  继承变量的索引内容
+.border-arg(@w:30px,@c:#2bff52,@xx:solid){
+  border: @arguments;
+}
+.test_arguments{
+  .border-arg(40px)
+}
+
+//计算
+.test03{
+  width: calc(300px - 100px);
+  height: calc(300px - 100px);
+  background: pink;
+  margin-top:20px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--添加内容的地方-->
+    <div class="IsSelect">
+        <div class="IsSelectone" >
+            <!-- 添加内容                                                                                                                                                                                                             点击删除当前的标签-->
+            <div ng-repeat="ccd in checkCateData" style="width:100px;"><span style="width:50px;display:block;float:left;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;">{{ccd}}</span><i ng-click="deleteCheckData(ccd)">×</i></div>
+        </div>
+        <div class="IsSelectIn"></div>
+    </div>
+<!--添加的第二个样式  给第一个添加默认样式可点击属于动态添加-->
+    <div class="otseInRiht" style="overflow:hidden">
+        <!-- 索引等于0的时候，天加默认样式    -->
+        <a ng-class="{'active': $index==0}" ng-click="checkcateClick(ccd,$event)" style="width:70px;cursor:pointer;display:block;float:left;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;" class="active{{$index}}" ng-repeat="ccd in checkCateData" ng-show="$index<cateNumber">{{ccd}}</a>
+    </div>
+
+
+    <div class="bd">
+        <!-- 循环开始     数组的方式 绑定-->
+        <div class="item" ng-repeat="ct in category">
+            <div class="list">
+                <!-- 绑定值-->
+                <a >{{ct.expression_category}}</a>
+            </div>
+            <div class="arrow">&gt;</div>
+            <div class="line"></div>
+            <div class="subitem">
+                <div class="inner">
+                    <div class="tit tit1" style="height:auto;clear:both;">
+                        <!-- 标题-->
+                        <div style="height:100%;display:inline-block;width:20%;font-size:20px;">{{ct.expression_category}}</div>
+                        <div style="height:100%;display:inline-block;width:5%;text-align:left;font-size:20px;">></div>
+                        <ul style="height:auto;width:74%;display:inline-block;margin-left:0;padding-left:0;border-bottom:1px solid #ddd;padding-bottom:10px;float:right;">
+                            <!-- 绑定数据                                                                                                          获取当前点击的是哪一个  当前点击的就是我们要传递的参数   -->
+                            <li ng-repeat="sc in ct.subData" style="border-left:2px solid #ddd;margin-top:10px;"> <a  style="cursor:pointer;" ng-click="subDataClick(sc.expression_subcategory)">{{sc.expression_subcategory}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    /**
+     * provinceid: $scope.provinceid, ====  provinceid=
+     *  beginTime: $scope.beginTime   ====  beginTime=2016-09-15
+     *   endTime: $scope.endTime     ====  endTime=2016-09-21
+     *   date_type: $scope.dataType, ==== date_type=0&endTime=2016-09-21
+     *   subcateStr: $scope.subcateStr ===
+     *   page: $scope.currentPage,   ====   page=1
+     *   pagesize: $scope.perItems   ===
+     * */
+
+
+
+    function getCategory() {
+//获得一级标签          参数：LTED/CategoryService/getCategory?beginTime=2016-09-15&date_type=0&endTime=2016-09-21&page=1&pagesize=10&provinceid=
+        httpService.get("LTED", "CategoryService", "getCategory", { provinceid: $scope.provinceid, beginTime: $scope.beginTime, endTime: $scope.endTime, date_type: $scope.dataType, subcateStr: $scope.subcateStr, page: $scope.currentPage, pagesize: $scope.perItems }).then(function (d) {
+            $scope.category = []; //创建一个空数组，
+            $.each(d, function (i, o) {  //循环所以数据
+//通过传递参数筛选出二级标签  ，                             参数是一级目录的标签名， 传递三个标签就有三个标签名，
+                httpService.get("LTED", "CategoryService", "getSubCateByCate", { category: o.expression_category }).then(function (data) {
+                    o["subData"] = data;  //获取子菜单想要内容
+                });
+                $scope.category.push(o);  //存到空数组中
+                setTimeout(function () {
+                    $(".product_sort .bd .item").hover(function () {  //显示或隐藏
+                        $(this).addClass("layer");
+                    }, function () {
+                        $(this).removeClass("layer");
+                    });
+                },500);
+
+            });
+
+        });
+    }
+//通过点击事件 获得参数
+    $scope.subDataClick = function (cate) {
+        var ary = $scope.checkCateData;  //先创建一个angular
+        if (ary.indexOf(cate)==-1) {   //防止重复添加  ：如果要检索的字符串值没有出现，则该方法返回 -1。
+            ary.push(cate);
+        }
+        $scope.checkCateData = ary;  //添加到里面
+    }
+//删除添加的内容 点击x号可删除
+    $scope.deleteCheckData = function (cate) {
+        $scope.checkCateData.remove(cate);
+        //这地执行的是逻辑操作删除后，后台要实现的效果
+    }
+
+//添加后可点击切换样式（动态添加内容）
+    $scope.checkcateClick = function (c,$event) {  //c是当前点击的（标签里的内容）   $event 是所有标签的对象所有的信息
+        $('.active').removeClass("active");  //有active 这个属性的删除 active
+        $($event.target).addClass("active"); //$event.target 当前点击的这个标签加属性，添加样式
+        $scope.subcateCheck = c;
+
+    }
+
+</script>
