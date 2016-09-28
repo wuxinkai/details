@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/angular-1.4.6.min.js"></script>
+</head>
+<body>
+<h4 mouse-over-leave hover="hover">测试一下 </h4><span ng-show="hover">显示内容</span><span ng-show="hover">显示内容</span>
+</body>
+</html>
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.directive('mouseOverLeave', function(){
+        return {
+            restrict: 'A',
+            scope: {
+                hover: "="
+            },
+            link: function(scope, elem, attr){
+                elem.bind('mouseover', function(){
+                    elem.css("cursor", "pointer");
+                    scope.$apply(function(){
+                        scope.hover = true;
+                    });
+                });
+                elem.bind('mouseleave', function(){
+                    scope.$apply(function(){
+                        scope.hover = false;
+                    });
+                });
+            }
+        }
+    });
+</script>

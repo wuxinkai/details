@@ -34,11 +34,6 @@
               templateUrl: 'views/uibootstrap.html',
               controllerUrl: 'scripts/controllers/uibootstrapCtrl'
           }))
-          .state('main.echartsMap', angularAMD.route({
-               url: '/echartsMap',
-               templateUrl: 'views/echartsMap.html',
-               controllerUrl: 'scripts/controllers/echartsMapCtrl'
-          }))
           .state('main.confirm', angularAMD.route({
               url: '/confirm',
               templateUrl: 'views/confirm.html',
@@ -61,7 +56,10 @@
               url: '/echartsDemoConnect',
               templateUrl: 'views/eCharts/echartsDemoConnect.html',
               controllerUrl: 'scripts/controllers/eCharts/echartsDemoConnectCtrl'
-
-          }))
+          })).state('main.echartsMap', angularAMD.route({
+            url: '/echartsMap',
+            templateUrl: 'views/eCharts/echartsMap.html',
+            controllerUrl: 'scripts/controllers/eCharts/echartsMapCtrl'
+        }))
     }]);
 });
