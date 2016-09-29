@@ -1,0 +1,92 @@
+
+.onepage{ height: 750px;}
+.onepage_bg{ height: 800px;
+    width: 100%;
+    position: absolute;
+    background-position:center center ;/*图片居中，没有图片先用背景色*/
+    background-size:cover;/*文字不失真*/
+}
+#onepage_bg{
+    background: url("../images/diyibg.jpg")
+}/*引入图片*/
+.headh1center{
+    margin-top: 150px;
+    line-height: 75px;  }/*h1*/
+.title-text{ margin-left: 50px;}/*全部向左50px*/
+.headfontsize h1{
+    font-size: 50pt;
+    color: #ffffff;
+}/*h1的样式*/
+.headfontsize p{
+    color: #ffffff;
+}/*p的样式*/
+
+/*第二屏幕内容*/
+
+.twopage{ padding: 2px 0 0 2px; height: auto; background: #122b40; position: relative}
+.twopage-text{ width: 100%; text-align:center; }
+.twopage-text-h1{ color: #ffffff; margin-left: 120px; letter-spacing: 2px; margin-top: 80px; margin-bottom: 0px; padding: 20px 0 0 0}/*左右展开2px*/
+.twopage-text-h1 img{ width: 120px; margin-top: -20px;}
+.twopage .row{ margin-left:0px; margin-right: 0px; }/*删除默认样式  有一个-15px的属性*/
+/*图片样式*/
+.twopage-courses{ width: 380px; height: 330px; float: left; background: #ffffff; padding:  0 2px 2px 0;overflow: hidden;position: relative}/*父定位*/
+.twopage-courses>a{ width: 100%; height: 100%; float: left; text-align: center;position: relative }
+.classsion h3{ margin-top: 120px;  color: #d1e973;}
+.classsion h1{ margin-top: 120px;  color: #fff;}
+.classsion{ width: 100%; height: 100%;position: absolute; left: 0px; top: 0px; color: #ffffff;opacity: 0;}/*子定位在父亲的上面*/
+.classsion:hover{ background: #1eb450;opacity: 0.9; transition: opacity 0.5s;-webkit-transition: opacity 0.5s }
+/*按钮样式*/
+.twopage-btn{ width: 100%; margin: 1% auto; text-align: center;}
+.btn-lg{ font-size: 25px;}/*让字体把盒子撑大*/
+
+/*第三屏样式*/
+.threepage{  position: absolute;  width: 100%;  height: 800px;}
+.threepage-bg{width: 100%;height: 550px;position: absolute;  background-position:center center; background: no-repeat; background-size:cover;  }
+#threepage-bg{ background: #ffff00}
+.threepagecontent{ width: 100%; margin: 0 auto;  text-align: center;}
+.threepagetext{ margin-top: 100px;}
+.threepagetext p{ margin-top: 20px; color: #000; font-size: 20px;line-height: 32px;}
+.kuaisuzhuce{margin-top: 150px;font-size: 25px;}/*按钮*/
+/*第四屏*/
+.fourpage{height: 700px; background: #dca7a7; margin-top: 550px;}
+.coursexingqing-text{ color: #ffffff;margin-top: 100px;width: 100%;text-align: center;}
+.coursexingqing-text p{ margin-top: 25px;font-size: 20px;}
+.fourpage  .container .carousel{ margin-top: 100px;}
+/*按钮的颜色消失*/
+.carousel-control.left{ background-image: -webkit-linear-gradient(left,rgba(0,0,0,0)0,rgba(0,0,0,0)100%); /*按钮*/
+    background-image: -o-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%); /*按钮*/
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0)));
+    background-image: linear-gradient(to right,rgba(0,0,0,0)0,rgba(0,0,0,0)100%);
+    background-repeat: repeat-x;
+}
+.carousel-control.right{right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,0)0,rgba(0,0,0,0)100%) /*按钮*/
+background-image: -o-linear-gradient(left,rgba(0,0,0,0)0,rgba(0,0,0,0)100%);
+    background-image: -webkit-gradient(linear,left top,right top, from(rgba(0,0,0,0)),to(rgba(0,0,0,0)));
+    background-image: linear-gradient(to right,rgba(0,0,0,0)0,rgba(0,0,0,0)100%);
+    background-repeat: repeat-x;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev{left: -20%;}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next{left: -20%;}
+
+/*第五屏幕样式*/
+.fivepage{ width: 100%; height: 800px;position: absolute;background-position:center center;background-size:cover  }
+#fivepage{ background: #bce8f1}/*背景*/
+.footertext{margin-top:55px; width: 100%;color: #ffffff;font-size: 20px; text-align: center; }
+/*按钮*/
+.footerconter{ margin-top: 100px; text-align: center;}
+/*鼠标滑过图片效果*/
+.queyeicon{width: 200px;}
+.queyeicon:hover{border: 2px red solid; }
+.footertextbtn{ margin-top: 150px; width: 100%; text-align: center;}
+.footertextbtn-text{ margin-top: 20px;color: #000000; }
+
+/*导航样式*/
+.side-nav{position: fixed; top: 45%; right: 20px; z-index: 100}
+/*设置ul*/
+.side-nav ul.nav-side-nav{  text-align: center; list-style: none; margin: 0; padding-left: 0px;}
+/*设置li*/
+.side-nav ul.nav-side-nav>li{display: block; line-height: 1.45em; margin: 0px; padding: 8px 0;}
+/*a标签*/
+.side-nav ul.nav-side-nav>li>a{display: block; width: 10px; height: 10px; border-radius:50%; background: #ffffff; }
