@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/angular-1.4.6.min.js"></script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;list-style: none}
+        ul{width: 200px;margin: 50px auto}
+        .cur{background: red}
+    </style>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <ul id="ul">
+        <li  ng-repeat="x in names"><a href="javascript:;">{{x}}</a></li>
+    </ul>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.names = ["新闻新闻新闻", "军事军事军事", "社会社会社会","科技科技科技", "手机手机手机", " 财经财经财经","股票股票股票", "外汇外汇外汇", "探索探索探索",];
+    });
+</script>
+<script type="text/javascript">
+//    $("ul li a").click(function(){
+//        alert("这样是获取不到a的内容的")
+//    })
+//  看选择器
+    $("ul").click(function(e){
+     var tar = e.target || e.srcElement;
+        if(tar.nodeName=="A"){
+            $('.cur').removeClass("cur");
+            $(tar).addClass("cur");
+        }
+
+    })
+
+</script>
+</body>
+</html>
