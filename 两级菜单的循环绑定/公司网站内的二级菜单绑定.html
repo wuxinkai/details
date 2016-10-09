@@ -34,8 +34,8 @@
                     <div class="tit tit1" style="height:auto;clear:both;">
                         <!-- 标题-->
                         <div style="height:100%;display:inline-block;width:20%;font-size:20px;">{{ct.expression_category}}</div>
-                        <div style="height:100%;display:inline-block;width:5%;text-align:left;font-size:20px;">></div>
-                        <ul style="height:auto;width:74%;display:inline-block;margin-left:0;padding-left:0;border-bottom:1px solid #ddd;padding-bottom:10px;float:right;">
+                        <div style="height:100%;display:inline-block;width:5%;text-align:left;font-size:20px">></div>
+                        <ul >
                             <!-- 绑定数据                                                                                                          获取当前点击的是哪一个  当前点击的就是我们要传递的参数   -->
                             <li ng-repeat="sc in ct.subData" style="border-left:2px solid #ddd;margin-top:10px;"> <a  style="cursor:pointer;" ng-click="subDataClick(sc.expression_subcategory)">{{sc.expression_subcategory}}</a></li>
                         </ul>
