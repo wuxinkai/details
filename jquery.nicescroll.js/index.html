@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #sidebar{width: 300px;height: 300px; margin: 100px auto; border: 3px solid #000;overflow: hidden;  outline: none;position: relative}
+        .sidebar-menu{ height: 2000px; background: salmon;width: 100%;position: absolute}
+        .box{ height: 2900px;}
+    </style>
+</head>
+<body>
+   <div class="box">
+       <div>
+           <div id="sidebar" class="nav-collapse">
+               <div class="sidebar-menu" id="nav-accordion"></div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript">
+    $("#sidebar").niceScroll({
+        styler: "fb",
+        cursorcolor: "#72d0eb", //颜色
+        cursorwidth: '8',      //宽度
+        cursorborderradius: '10px', //以像素为光标边界半径，默认为??“递四方
+        background: '#116077',   //背景色
+        spacebarenabled: false,  //
+        cursorborder: '',
+        zindex: '1000',//的 - 改变z-index值的滚动条的div，默认值是9999
+        //scrollspeed:"",         // - 滚动速度，默认值为60
+        //mousescrollstep:"",    // - 高速滚动鼠标滚轮，默认值是40（像素）
+        //touchbehavior:"",      // - 使光标拖动滚动像在台式电脑触摸设备（默认：false）
+        //hwacceleration:"",    // - 使用硬件加速滚动支持的时候（默认：true）
+        //boxzoom:"",          // - 使变焦框中的内容（默认：false）
+        //dblclickzoom:"",    // - （仅当boxzoom = TRUE）变焦激活时，双击对话框（默认：true）
+        //gesturezoom:"",    // - （仅当boxzoom =真实，使用触摸设备）上缩放框激活时，间距输出/输入（默认：true）
+        //grabcursorenabled:"",    //，显示“抢”图标的div touchbehavior = true时，（默认：true）
+        //autohidemode:"",    //，如何隐藏滚动条的作品，真=默认/“光标”=只进游标隐藏/ false =不隐藏背景，CSS改变轨道的背景下，
+    });
+    //右侧滚动条
+    $("html").niceScroll({
+        styler: "fb",
+        cursorcolor: "red",
+        cursorwidth: '8',
+        cursorborderradius: '10px',
+        background: '#ccc',
+        spacebarenabled: false,
+        cursorborder: '',
+        zindex: '1000'
+    });
+</script>

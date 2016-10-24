@@ -44,6 +44,16 @@
               templateUrl: 'views/state.html',
               controllerUrl: 'scripts/controllers/stateCtrl'
           }))
+            .state('main.parameter', angularAMD.route({  //配置路由传递参数
+                url: '/parameter',
+                templateUrl: 'views/parameter.html',
+                controllerUrl: 'scripts/controllers/parameterCtrl'
+            }))
+            .state('main.parameter1', angularAMD.route({  //路由子页面
+                url: '/parameter1?type&role',  //参数必须先在这边声明templateUrl: requirejs.toUrl(’…/…/user/user_list.html’),
+                templateUrl: 'views/parameter/parameter1.html',
+                controllerUrl: 'scripts/controllers/parameter/parameterCtrl1'
+            }))
             .state('main.echartsDemoOne', angularAMD.route({
               url: '/echartsDemoOne',
               templateUrl: 'views/eCharts/echartsDemoOne.html',
