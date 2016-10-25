@@ -50,9 +50,17 @@
                 controllerUrl: 'scripts/controllers/parameterCtrl'
             }))
             .state('main.parameter1', angularAMD.route({  //路由子页面
-                url: '/parameter1?type&role',  //参数必须先在这边声明templateUrl: requirejs.toUrl(’…/…/user/user_list.html’),
+                //第一种方法
+                params:{messageId:null},//params是传参方法 ，
+                url: '/parameter1',  //参数必须先在这边声明templateUrl: requirejs.toUrl(’…/…/user/user_list.html’),
+
+                //第二种方法 利用 ？后面传递参数
+                //url: '/parameter1?type&role',  //参数必须先在这边声明templateUrl: requirejs.toUrl(’…/…/user/user_list.html’),
                 templateUrl: 'views/parameter/parameter1.html',
-                controllerUrl: 'scripts/controllers/parameter/parameterCtrl1'
+                controllerUrl: 'scripts/controllers/parameter/parameterCtrl1',
+                // 第三种办法混合
+                //上两种办法混合应用
+                // 第四种 a标签的href传递参数
             }))
             .state('main.echartsDemoOne', angularAMD.route({
               url: '/echartsDemoOne',

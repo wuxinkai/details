@@ -1,4 +1,6 @@
+<span style="color: #000;font-size: 38px">单个参数传递</span>
 <div class="navbar-default">
+
     <ul class="ul">
         <li> <a href="javascript:;"  ui-sref="main.parameter1({type: 1, role: '一'})">点击首页</a></li>
         <li> <a href="javascript:;"  ui-sref="main.parameter1({type: 2, role: '二'})">数据管理</a></li>
@@ -6,6 +8,17 @@
         <li> <a href="javascript:;"  ui-sref="main.parameter1({type: 4, role: '四'})">方案管理</a></li>
         <li> <a href="javascript:;"  ui-sref="main.parameter1({type: 5, role: '五'})">进度跟踪</a></li>
         <li> <a href="javascript:;"  ui-sref="main.parameter1({type: 6, role: '六'})">分析报告</a></li>
+    </ul>
+</div>
+
+<span style="color: #000;font-size: 38px;">多个参数传递 利用（ ng-click ）</span>
+<div class="navbar-default">
+    <ul class="ul">
+        <!--利用  ng-click-->
+        <li> <a href="javascript:;"  ng-click="toProducer('{type: 2}')">点击首页</a></li>
+        <!--把路由里的，url: '/parameter1?type&role', 给弄开-->
+        <li> <a href="javascript:;"  ui-sref="main.parameter1({type: 2, role: '二'})">数据管理</a></li>
+
     </ul>
 </div>
 <style type="text/css">
