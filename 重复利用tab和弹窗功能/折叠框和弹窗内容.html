@@ -139,6 +139,7 @@
 		$scope.match=true;
 		//点击事件1
 		function match(swits){
+
 			if(swits==1) {
 				if ($scope.match) {
 					$scope.Icon1 = "glyphicon-hand-up";
@@ -175,19 +176,19 @@
 		}
 		$scope.clickTitle = function(num){
 			if(num==1){
-			//	$('#myModal').modal('show');
+				$('#myModal').modal('show');
 				match(1)
 				$scope.Title = "第一部分弹窗标题";
 			}else if(num==2){
-			//	$('#myModal').modal('show');
+				$('#myModal').modal('show');
 				$scope.Title = "第二部分弹窗标题";
 				match(2)
 			}else if(num==3){
-			//	$('#myModal').modal('show');
+				$('#myModal').modal('show');
 				$scope.Title = "第三部分弹窗标题";
 				match(3)
 			}else{
-			//	$('#myModal').modal('show');
+				$('#myModal').modal('show');
 				$scope.Title = "第四部分弹窗标题";
 				match(4)
 			}
