@@ -1,0 +1,144 @@
+/* css reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* default */
+body {
+    text-align: center;
+    font: normal 12px/20px 宋体;
+}
+
+h1 {
+    font: normal 20px/30px "Microsoft YaHei";
+    padding: 10px 0;
+}
+
+#header {
+    width: 980px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+#header .nav {
+    height: 45px;
+    line-height: 45px;
+    padding-left: 20px;
+    background: url(images/nav.png) no-repeat;
+}
+
+#header .nav ul {
+    overflow: hidden;
+    zoom: 1;
+}
+
+#header .nav ul li {
+    float: left;
+}
+
+#header .nav ul li a {
+    padding: 0 15px;
+    border-right: 1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#header .nav ul li a:hover {
+    color: #ff0;
+}
+
+#header .nav ul li.last a {
+    border-right: 0;
+}
+
+/* 个性化定制 */
+#header .theme {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    overflow: hidden;
+    zoom: 1;
+    z-index: 10;
+}
+
+#header .theme b {
+    display: block;
+    float: left;
+    line-height: 14px;
+    padding-right: 10px;
+    color: #ff0;
+    font-weight: normal;
+}
+
+#header .theme ul {
+    float: left;
+    background: url("images/theme.png") no-repeat 0 0;
+    height: 11px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+#header .theme li {
+    cursor: pointer;
+    float: left;
+    height: 11px;
+    margin-right: 2px;
+    overflow: hidden;
+    width: 12px;
+}
+
+#header .theme li.cur {
+    background: url("images/theme.png") no-repeat 0 -11px transparent;
+}
+
+#content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#content .pic {
+    padding: 20px;
+    border: 4px solid #c00;
+}
