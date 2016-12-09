@@ -64,6 +64,7 @@
         $scope.checkCateData = []; //创建数组  （如果不添加出出现替换，始终都是一个）
         $scope.subDataClick = function (cate) {
             var ary =$scope.checkCateData//赋值给变量
+            console.log(cate)
             if (ary.indexOf(cate)==-1) {   //避免重复添加
                 ary.push(cate);
             }
