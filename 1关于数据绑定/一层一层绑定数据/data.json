@@ -1,0 +1,57 @@
+[
+  {
+    "Id": "f87564b946b545bda6884960f612d501",
+    "Pid": "",
+    "Code": "4",
+    "Name": "工作流接口",
+    "Type": "ApiType",
+    "Path": "",
+    "NodeLevel": 1,
+    "Order_No": 4,
+    "Children": []
+  },
+  {
+    "Id": "f87564b94ab545bda6884960f612d501",
+    "Pid": "",
+    "Code": "1",
+    "Name": "GIS接口",
+    "Type": "ApiType",
+    "Path": "",
+    "NodeLevel": 1,
+    "Order_No": 1,
+    "Children": []
+  },
+  {
+    "Id": "f87564b94ab545bda6884960f612d50j",
+    "Pid": "",
+    "Code": "5",
+    "Name": "LESS接口",
+    "Type": "ApiType",
+    "Path": "",
+    "NodeLevel": 1,
+    "Order_No": 5,
+    "Children": []
+  },
+  {
+    "Id": "f87564b94ab545bda6884962f612d501",
+    "Pid": "",
+    "Code": "2",
+    "Name": "Echart接口",
+    "Type": "ApiType",
+    "Path": "",
+    "NodeLevel": 1,
+    "Order_No": 2,
+    "Children": []
+  },
+  {
+    "Id": "f87564b94ab545bda6885960f612d501",
+    "Pid": "",
+    "Code": "3",
+    "Name": "控件接口",
+    "Type": "ApiType",
+    "Path": "",
+    "NodeLevel": 1,
+    "Order_No": 3,
+    "Children": []
+  }
+]

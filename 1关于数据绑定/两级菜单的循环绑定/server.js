@@ -7,11 +7,6 @@ var server = http.createServer(function (request, response) {
     var data = fs.readFileSync("./data.json", "utf8");
     response.write(data)
 
-
-
-
-
-
 });
 server.listen(8888);
 
