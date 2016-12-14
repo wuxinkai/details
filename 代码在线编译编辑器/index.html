@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/editor.js"></script>
+    <style type="text/css">
+        .GuoLvWrap{ width:1170px; margin: 100px auto}
+        .GuoLvWrapAgo,.GuoLvWrapAfter{ width:1148px; padding:5px 10px; line-height:30px; font-size:14px;}
+        .GlOtherWay,.GuoLvWay,.GuoLvCbtn{ display:inline-block; float:right;}
+        .GlOtherWay span,.GlOtherWay input,.GuoLvWay span,.GuoLvWay input,.GuoLvCbtn input{ display:inline-block; float:left;}
+        .GuoLvCbtn input{ padding:0px 12px; border:none; height:35px; color:#0474c8;font-size:14px; line-height:35px; text-align:center; margin-left:10px; _padding:0px 7px;}
+        .GuoLvCbtn input:hover{filter: alpha(opacity=80);opacity: 0.8;}
+        .GuoLvCbtn input.GLOkBtn:hover{  filter: alpha(opacity=80);opacity: 0.8; }
+        .GuoLvCbtn input.GLOkBtn{ background-color:#55a7e3; color:#fff;font-family: 'Microsoft YaHei';}
+    </style>
+</head>
+<body>
+<h1>代码在线预览</h1>
+<div class="wrapper pt20 pb20">
+    <div class="GuoLvWrap auto">
+        <form autocomplete="off">
+            <!--GuoLvWrap-begin-->
+            <div class="pr"><textarea id="content" name="txtContent" class="GuoLvWrapAgo bor-a1s h200 WrapHid"></textarea><b class="search-hint CentHid" >请把要调试的内容粘贴到这里</b></div>
+            <div class="GuoLvWrapCenter pt10 clearfix">
+                <div class="GuoLvCbtn">
+                    <input type="button" id="test" class="bg-blue02" value="调试预览">
+                    <input type="button" id="select" class="bg-blue02" value="全选代码">
+                    <input type="button" id="clear" class="bg-blue02" value="清空代码">
+                    <input type="button" id="save" class="GLOkBtn" value="保存代码">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>tools.webdebugger.init();</script>
+</body>
+</html>
