@@ -1,0 +1,11 @@
+<!-- 不建议直接通过style方式使用内嵌样式, 建议定义样式定义,附加到class最后 -->
+<div  class="container-fluid" id="IndexMain" style="width:100%;height:100%;position:relative;">
+    <div class="row-fluid" style="height:100%;width:90%;">
+        <ng-echarts id="e1" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ec-config="pieConfig" ec-option="pieOption" style="height: 95%;"></ng-echarts>
+    </div>
+    <div ng-show="floatTabStatus" data-val="{{floatTabStatus}}" class="row-fluid" id="floatTab" style="position:absolute;background-color:#fff;width:350px;height:130px;border-radius:5px;overflow:hidden;" ng-style="{'top':screenY}">
+        <div style="position:relative;height:100%;width:100%;">
+            <ng-echarts id="bar" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ec-config="pieConfigbar" ec-option="pieOptionbar" style="width:440px;height: 210px;position:absolute;top:-50px;left:-50px;"></ng-echarts>
+        </div>
+    </div>
+</div>

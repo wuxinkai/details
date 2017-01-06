@@ -78,6 +78,9 @@
             url: '/echartsMap',
             templateUrl: 'views/eCharts/echartsMap.html',
             controllerUrl: 'scripts/controllers/eCharts/echartsMapCtrl'
-        }))
+        }));
+
+        $urlRouterProvider.otherwise('index.html#/main');
+
     }]);
 });
