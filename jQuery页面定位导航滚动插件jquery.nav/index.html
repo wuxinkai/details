@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery页面定位导航滚动插件jquery.nav  #demo1</title>
+<link href="css/lanrenzhijia.css" rel="stylesheet" media="all">
+</head>
+<body>
+<ul id="nav">
+  <li class="current"><a href="#examples">Examples</a></li>
+  <li><a href="#intro">Intro</a></li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#options">Options</a></li>
+</ul>
+<div id="container">
+  <div class="section" id="examples">
+    <h1>1111111111111111111</h1>
+    <ul>
+      <li><a href="index.html">垂直位置导航</a></li>
+      <li><a href="index2.html">水平位置导航</a></li>
+    </ul>
+  </div>
+  <div class="section" id="intro"><h1>222222222222222</h1></div>
+
+  <div class="section" id="usage"><h1>333333333333333333</h1></div>
+
+  <div class="section" id="options"><h1>44444444444444</h1></div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script>
+$(function(){
+	$('#nav').onePageNav();
+});
+</script>
+</body>
+</html>
