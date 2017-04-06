@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jtopo-0.4.8-min.js
+    "></script>
+</head>
+<body>
+    <canvas height="800" width="1700"   id="canvas" ></canvas>
+</body>
+</html>
+<script type="text/javascript">
+    var canvas = document.getElementById('canvas');
+    var stage = new JTopo.Stage(canvas); // 创建一个舞台对象
+    var scene = new JTopo.Scene(stage); // 创建一个场景对象
+
+    var node = new JTopo.Node("Hello");    // 创建一个节点
+    node.setLocation(300,200);    // 设置节点坐标
+    scene.add(node); // 放入到场景中
+    scene.background = './imgs/topobj.jpg'; //背景
+
+//    node.rotate = Math.random(); // 旋转角度
+//    node.scaleX = Math.random(); // 水平方向的缩放
+//    node.scaleY = Math.random(); // 垂直方向的缩放
+//   node.alpha = Math.random();  // 透明度
+    node.setImage('./imgs/host.png'); // 设置图片
+
+</script>

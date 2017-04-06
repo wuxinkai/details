@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>带边线的三角</title>
+    <style>
+        *{padding:0;margin: 0;}
+
+        .arrow{
+            width: 30px;
+            height: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border-width: 1px 1px 0 0;
+            border-color: blue;
+            border-style: solid;
+            background: linear-gradient(225deg,#fff 50%, transparent 50%);
+            transform: rotate(-45deg);
+             position: absolute;
+            left: 50%;
+            top:50%
+        }
+        .arrowIn{width: 300px;height: 300px; margin: 100px auto}
+        .arrowIn:after{
+            width: 30px;
+            height: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border-width: 1px 1px 0 0;
+            border-color: blue;
+            border-style: solid;
+            background: linear-gradient(225deg,#fff 50%, transparent 50%);
+            transform: rotate(-45deg);
+            position: absolute;
+            left: 40%;
+            top:40%
+        }
+    </style>
+</head>
+<body>
+
+    <div class="arrow"></div>
+    <div class="arrowIn">
+
+    </div>
+
+</body>
+</html>
