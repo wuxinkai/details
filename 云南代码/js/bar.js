@@ -22,37 +22,37 @@ option = {
     },
     xAxis: [
         {
-            splitLine:{show: false},
-            axisTick:{
-                show:false,
-            },
-            type: 'category',
-            show: true,
+            // splitLine:{show: false},
+            // axisTick:{
+            //     show:false,
+            // },
+            // type: 'category',
+            // show: true,
             data : ['狮子山','七一街','新华街','南门','五一街','光义街','新义街']
         }
     ],
     yAxis: [
         {
-            splitLine:{
-                show: true,
-                lineStyle:{
-                    color: ['#F7F7F7'],
-                    width: 1,
-                    type: 'solid'
-                }
-            },
-            type: 'value',
-            show: true,
-            axisLine:{
-                show:false,
-            },
-            axisTick:{
-                show:false,
-            },
-            axisLabel : {
-                formatter: '',
-
-            },
+            // splitLine:{
+            //     show: true,
+            //     lineStyle:{
+            //         color: ['#F7F7F7'],
+            //         width: 1,
+            //         type: 'solid'
+            //     }
+            // },
+            // type: 'value',
+            // show: true,
+            // axisLine:{
+            //     show:false,
+            // },
+            // axisTick:{
+            //     show:false,
+            // },
+            // axisLabel : {
+            //     formatter: '',
+            //
+            // },
         }
     ],
     series: [

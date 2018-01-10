@@ -31,7 +31,9 @@
 
       <div class="container">
 
-        <h1 style="margin: 0 0 20px 0">Configuration Builder</h1>
+        <h1 style="margin: 0 0 20px 0">
+         <a href="http://www.cnblogs.com/luoruiyuan/p/6484936.html"> 日期文档；API</a>
+        </h1>
 
         <div class="well configurator">
            
@@ -46,12 +48,14 @@
               </div>
 
               <div class="form-group">
-                <label for="startDate">startDate</label>
+                <label for="startDate">开始时间</label>
+                <label for="startDate">禁用某一天，或者，禁用某一周</label>
+                <label for="startDate">开始时间</label>
                 <input type="text" class="form-control" id="startDate" value="07/01/2015">
               </div>
 
               <div class="form-group">
-                <label for="endDate">endDate</label>
+                <label for="endDate">结束时间</label>
                 <input type="text" class="form-control" id="endDate" value="07/15/2015">
               </div>
 
@@ -76,37 +80,38 @@
 
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="singleDatePicker"> singleDatePicker
+                  <input type="checkbox" id="singleDatePicker"> 单一日期
                 </label>
               </div>
 
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="showDropdowns"> showDropdowns
+                  <input type="checkbox" id="showDropdowns"> 显示下拉菜单
                 </label>
               </div>
 
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="showWeekNumbers"> showWeekNumbers
+                  <input type="checkbox" id="showWeekNumbers"> 显示周数
                 </label>
               </div>
 
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="showISOWeekNumbers"> showISOWeekNumbers
+                  <input type="checkbox" id="showISOWeekNumbers"> 显示国际标准化组织周数
                 </label>
               </div>
 
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="timePicker"> timePicker
+                  <input type="checkbox" id="timePicker"> 时间选择器
+
                 </label>
               </div>
 
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="timePicker24Hour"> timePicker24Hour
+                  <input type="checkbox" id="timePicker24Hour"> 时间24小时选择器
                 </label>
               </div>
 
@@ -252,7 +257,8 @@
 
         $('#startDate').daterangepicker({
           singleDatePicker: true,
-          startDate: moment().subtract(6, 'days')
+          startDate: moment().subtract(6, 'days'),
+          endDate: new Date() //禁用当前日 之后的天数
         });
 
         $('#endDate').daterangepicker({
