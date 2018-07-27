@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+    <script type="text/javascript" src="exif.js"></script>
+</head>
+<body>
+<!--<img src="http://www.hbclyz.com/UploadFiles/msfc/2012/12/201212101603420430.jpg" id="img1" />-->
+<div id="app">
+    <div id="box">
+        <img src="example/201212101603420430 (1).jpg" />
+    </div>
+</div>
+<!--<img src="http://code.ciaoca.com/static/img/donate_qrcode_alipay.png" id="img2" />-->
+</body>
+</html>
+<script type="text/javascript">
+
+    var app2 = new Vue({
+        el: '#app',
+        data: {
+            message: '页面加载于 ' + new Date().toLocaleString(),
+        },
+        mounted : function() {
+            var self = this;
+            self.greet();
+        },
+        methods : {
+            greet : function() {
+                var self = this;
+                setTimeout(function () {
+                    self.$nextTick(function() {
+
+                        var box = document.getElementById('box');
+                        var imgList1 = box.getElementsByTagName('img')[0];
+
+                    })
+
+                },2000)
+                self.$nextTick(function() {
+
+                    var box = document.getElementById('box');
+                    var imgList1 = box.getElementsByTagName('img')[0];
+                    window.addEventListener('load', function () {
+                        alert()
+                        EXIF.getData(imgList1, function () {
+                            var DateTimeOriginal = EXIF.getTag(this, "DateTimeOriginal"), //创建时间
+                                model = EXIF.getTag(this, "Model"), //机型
+                                XResolution = EXIF.getTag(this, "XResolution"),//分辨率
+                                YResolution = EXIF.getTag(this, "YResolution"),
+                                YResolution =YResolution.numerator / YResolution.denominator,
+                                XResolution =XResolution.numerator / XResolution.denominator;
+                            console.log(DateTimeOriginal,model,YResolution,XResolution)
+                        });
+                    })
+                })
+            }
+        }
+    })
+//window.onload=getExif;
+
+//function getExif() {
+//    var box =document.getElementById('box')
+//    var imgList = box.getElementsByClassName("img1")[0]
+//    EXIF.getData(imgList, function() {
+//        var DateTimeOriginal = EXIF.getTag(this, "DateTimeOriginal"), //创建时间
+//            model = EXIF.getTag(this, "Model"), //机型
+//            XResolution = EXIF.getTag(this, "XResolution"),//分辨率
+//            YResolution = EXIF.getTag(this, "YResolution"),
+//            YResolution =YResolution.numerator / YResolution.denominator,
+//            XResolution =XResolution.numerator / XResolution.denominator;
+//        console.log(DateTimeOriginal,model,YResolution,XResolution)
+//    });
+//}
+
+
+</script>
