@@ -65,8 +65,73 @@
 
     </div>
 </div>
-
+<div id="oDiv">
+    <span></span>
+    <span></span>
+    <span></span>
+    <p>
+        <span></span>
+        <span></span>
+    </p>
+</div>
 <script type="text/javascript">
+//获取页面元素
+//     document.getElementById()
+//     context.getElementsByTagName() //获取元素中的子子孙孙
+
+// var oDiv = document.getElementById('oDiv');
+// console.log(oDiv.getElementsByTagName('span'))  //5个  ie6-8不兼容
+// document.getElementsByName('')  //ie6-8只对表单起作用
+// document.body //获取body
+// document.documentElement //获取html
+// document.querySelector()
+// document.querySelectorAll(); //不存在dom映射关系，看上去是nodelist集合但它是静态集合，
+
+//表述节点关系属性（标准浏览器会把空格和换行当成文本节点来处理）
+// childNodes // 获取所以子节点
+// children //获取所有的元素子节点  ie6-8 获取结果不一致
+// parentNode  //父亲节点
+// previousSibling  /  previousElenentSibling
+// nextSibling  /  previousElenentSibling
+// lastChild / firstElementChild
+
+//动态操作dom方法
+
+//createDocumentFragment()
+//appendChild
+//document.createDocumentFragment
+//insertBefore
+//cloneNode(true/flase)
+//removeChild
+//get / set/ removeAttribute
+
+
+//盒子模型
+
+
+// 获取某一个容器的元素子节点，可以筛选指定标签名 chlidren
+
+//通过元素的样式名，获取一组元素
+
+// jquery  获取哥哥元素节点，prev   获取所以哥哥prevAll
+//  获取弟弟  next  获取所有弟弟nextAll
+// 获取两个相邻的 sibing
+// 获取所有兄弟节点siblings
+// 获取第一个元素节点发firstChild
+// 获取最后一个元素子节点，lastChild
+
+//prepend 和appendChild对应 增加到某一个元素的开通，
+// insertAfter 和insertBefore 增加到容器中某一个元素后面
+// addClass  增加样式
+// removeClass  删除
+// hasClass  判断是否存在
+
+//nodeType===1 是元素节点
+
+//ary[ary.length] = i  === ary.push(i)l;
+
+
+
     var mark = document.getElementById("mark");
 
     document.body.onclick = function (e) {

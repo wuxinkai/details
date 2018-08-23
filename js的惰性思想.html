@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    var utlis =(function () {
+        var flag = 'getComputedStyle' in window; //flag变量不销毁，存储当前浏览器，是否兼容getComputedStyle，兼容的化是标准浏览器，但是如果falg=false说明当前是ie6-8
+
+        //惰性思想，第一次给  utlis赋值的时候，我们就把兼容处理好了。把结果存在flag里面，以后每个方法，只要有ie6-8不兼容，我们就使用flag
+        function win() {
+
+        };
+        function win2() {
+
+        }
+        return {
+            win:win,
+            win2:win2
+        }
+    })()
+
+
+</script>
